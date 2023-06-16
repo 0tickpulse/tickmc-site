@@ -64,3 +64,17 @@ ol {
 ul {
     @apply list-disc list-inside;
 }
+
+.header-github-link::before {
+    @apply w-8 h-8 flex bg-no-repeat hover:opacity-60
+        bg-[url("../../static/img/github.svg")]
+        dark:bg-[url("../../static/img/github-dark.svg")];
+    content: "";
+}
+
+.header-discord-link::before {
+    @apply w-8 h-8 flex bg-no-repeat hover:opacity-60
+        bg-[url("../../static/img/discord.svg")]
+        dark:bg-[url("../../static/img/discord-dark.svg")];
+    content: "";
+}

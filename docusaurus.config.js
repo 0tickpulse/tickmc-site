@@ -102,10 +102,15 @@ const config = {
                     },
                     { to: "/blog", label: "Blog", position: "left" },
                     {
-                        href: "https://github.com/facebook/docusaurus",
-                        label: "GitHub",
+                        href: "https://github.com/0tickpulse/tickmc-site",
+                        className: "header-github-link",
                         position: "right",
                     },
+                    {
+                        href: "https://discord.gg/B8fjuqrptZ",
+                        className: "header-discord-link",
+                        position: "right",
+                    }
                 ],
             },
             footer: {
