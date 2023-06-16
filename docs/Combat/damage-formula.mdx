@@ -1,0 +1,50 @@
+# Damage Formula
+
+Entity damage takes into account the enemy's various Defense stats.
+
+The total damage of a damage event is calculated as follows:
+
+$$
+\text{Total damage} = \left(\sum \text{Elemental Damage} \right) \cdot \begin{cases} 1 + \text{cdmg} & \text{if crit} \\ 1 & \text{otherwise} \end{cases}
+$$
+
+Where:
+
+- $\text{cdmg}$ is the critical damage stat of the attacker.
+
+In other words, the total damage is the sum of the damage for each element, multiplied by the critical damage multiplier.
+This means that crit is not independent of elemental damage.
+For a damage event, the following formula is used per element:
+
+$$
+\text{Elemental Damage} = \text{edmg} \cdot \left(1 - \cfrac{\text{edef}}{|\text{edef}| + 100} \right)\cdot \left(1 - \cfrac{\text{def}}{|\text{def}| + 100} \right)
+$$
+
+Where:
+
+- $\text{edmg}$ is the damage stat of the attacker for that element.
+- $\text{def}$ is the defense stat of the defender.
+- $\text{edef}$ is the defense stat of the defender for that element.
+
+The total damage is the sum of the damage for each element.
+From the formula, we can see that elemental defense and regular defense are independent of each other and are applied multiplicatively.
+
+## Knockback
+
+Knockback occurs when an entity is hit by an attack, and is described by a change in the velocity vector of the entity.
+
+$$
+\overrightarrow{v_\text{D}} =
+\begin{cases}
+    \overrightarrow{v_\text{D}} + \begin{bmatrix} 0 \\ 0.1 \\ 0 \end{bmatrix} & \text{if A = D} \\
+    \cfrac{1}{2} \cdot \left(\overrightarrow{v_\text{D}} + \overrightarrow{v_\text{A}} + \overrightarrow{AD}\right) & \text{otherwise}
+\end{cases}
+$$
+
+Where:
+
+- $\text{A}$ is the attacker.
+- $\text{D}$ is the defender.
+- $\overrightarrow{v_\text{A}}$ is the velocity vector of the attacker.
+- $\overrightarrow{v_\text{D}}$ is the velocity vector of the defender.
+- $\overrightarrow{AD}$ is the vector from the attacker to the defender.
