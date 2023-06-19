@@ -143,7 +143,7 @@ const config = {
                             },
                             {
                                 label: "GitHub",
-                                href: "https://github.com/0tickpulse/tickmc-docs",
+                                href: "https://github.com/0tickpulse/tickmc-site",
                             },
                         ],
                     },
