@@ -2,43 +2,41 @@
 
 This document outlines the various technologies used in TickMC. Note that this is not a complete list, but rather a list of the most important technologies.
 
-## Applications and Data
+## The Minecraft Server
 
-TickMC primarily uses the following technologies:
+The Minecraft server for TickMC primarily uses the following technologies:
 
 - [PaperMC](https://papermc.io/) - The server software for the Minecraft server
 - [DenizenScript](https://denizenscript.com/) - The scripting engine used for the Minecraft server
 - [Blockbench](https://www.blockbench.net/) - The software for creating models
+- [Bloom Host](https://bloom.host/) - The server hosting provider
+- [Pterodactyl](https://pterodactyl.io/) - The panel that Bloom.host uses
+
+## The Website
+
+The website for TickMC primarily uses the following technologies:
+
 - [React](https://reactjs.org/) - The frontend framework for the website
 - [TypeScript](https://www.typescriptlang.org/) - The programming language used for the frontend
 - [TailwindCSS](https://tailwindcss.com/) - The CSS framework used for the frontend
 - [Docusaurus](https://docusaurus.io/) - The static site generator used for the documentation
+- [Vercel](https://vercel.com/) - The hosting provider for the website
 - (Future) [Algolia DocSearch](https://docsearch.algolia.com/) - The search engine for the documentation
 
 ## Utilities
 
-TickMC uses the following utilities:
+TickMC uses the following utilities for various services and purposes:
 
 - [Docker](https://www.docker.com/) - The containerization software used for the server and various other services
 - [Git](https://git-scm.com/) - Version control software
-
-## DevOps
-
-TickMC relies on the following DevOps technologies:
-
-- [Bloom Host](https://bloom.host/) - The server hosting provider
-- [Pterodactyl](https://pterodactyl.io/) - The panel that Bloom.host uses
 - [Docker](https://www.docker.com/) - The containerization software used for the server and various other services
 - [GitHub](https://github.com/0tickpulse) - Version control and issue tracking provider, uses Git
-- [Vercel](https://vercel.com/) - The hosting provider for the website
+- [Caddy](https://caddyserver.com/) - A backend webserver used for various services
+- [Cloudflare](https://cloudflare.com/) - The primary DNS provider. Note that we use this in conjunction with Bloom's reverse proxy.
 
-## Business Tools
+## Business Communication and Management
 
 TickMC utilizes the following business tools:
 
-- [Bloom Host](https://bloom.host/) - The server hosting provider
-- [GitHub](https://github.com/0tickpulse) - Version control and issue tracking provider, uses Git
 - [Discord](https://discord.com/) - Main communication platform
-- [Caddy](https://caddyserver.com/) - A backend webserver used for various services
-- [Cloudflare](https://cloudflare.com/) - The primary DNS provider. Note that we use this in conjunction with Bloom's reverse proxy.
 - [Notion](https://notion.so/) - Task management platform
