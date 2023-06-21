@@ -36,7 +36,7 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: "0tickpulse", // Usually your GitHub org/user name.
-    projectName: "tickmc-doc", // Usually your repo name.
+    projectName: "tickmc-site", // Usually your repo name.
 
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -61,6 +61,12 @@ const config = {
             "classic",
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
+                sitemap: {
+                    changefreq: "weekly",
+                    priority: 0.5,
+                    ignorePatterns: ["/tags/**"],
+                    filename: "sitemap.xml",
+                },
                 docs: {
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
@@ -85,6 +91,32 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            algolia: {
+                // The application ID provided by Algolia
+                appId: "PLQSPW5N4T",
+
+                // Public API key: it is safe to commit it
+                apiKey: "947bc8a7413f9adc13b76f95b2a90300",
+
+                indexName: "tick-mc",
+
+                // Optional: see doc section below
+                contextualSearch: true,
+
+                // Optional: Algolia search parameters
+                searchParameters: {},
+
+                // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+                replaceSearchResultPathname: {
+                    from: "localhost:3000",
+                    to: "tick-mc.net/docs"
+                },
+
+                // Optional: path for search page that enabled by default (`false` to disable it)
+                searchPagePath: "search",
+
+                //... other Algolia params
+            },
             // Replace with your project's social card
             image: "img/docusaurus-social-card.jpg",
             navbar: {
@@ -110,7 +142,7 @@ const config = {
                         href: "https://discord.gg/B8fjuqrptZ",
                         className: "header-discord-link",
                         position: "right",
-                    }
+                    },
                 ],
             },
             footer: {
