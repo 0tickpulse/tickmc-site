@@ -62,7 +62,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 sitemap: {
-                    changefreq: "weekly",
+                    changefreq: "daily",
                     priority: 0.5,
                     ignorePatterns: ["/tags/**"],
                     filename: "sitemap.xml",
@@ -109,7 +109,7 @@ const config = {
                 // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
                 replaceSearchResultPathname: {
                     from: "localhost:3000",
-                    to: "tick-mc.net/docs",
+                    to: "tick-mc.net",
                 },
 
                 // Optional: path for search page that enabled by default (`false` to disable it)
